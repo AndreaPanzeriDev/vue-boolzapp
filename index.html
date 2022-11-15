@@ -53,13 +53,22 @@
             <input type="text" placeholder="Inserisci il nome da cercare" class="w-100">
 
             <!--Last chat-->
-            <div class="w-100">
-                <div class="cards d-flex" v-for="(description, index) in contacts">
-                    
+            <div class="cards d-flex justify-content-between" v-for="(name, index) in contacts">
+                <div class="d-flex align-items-center w-75">
+                    <img :src="contacts[index].avatar" alt="profile">
+                    <div>
+                        <div>{{contacts[index].name}}</div>
+                        <div class="fontSize">ultimo messaggio</div>
+                    </div>
+
+                </div>
+
+                <div class="d-flex align-items-start float-end w-25">
+                    <span class="hours text-end">12:00</span>
                 </div>
             </div>
         </div>
-        
+
         <!--mesage-->
         <div class="message">
 
