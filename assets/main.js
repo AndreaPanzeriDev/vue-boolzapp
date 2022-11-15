@@ -6,6 +6,7 @@ var app = new Vue({
                 name: 'Michele',
                 avatar: '_1',
                 visible: true,
+                image: 'img/avatar_1.jpg'
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',

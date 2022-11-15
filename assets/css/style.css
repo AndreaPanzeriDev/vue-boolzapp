@@ -25,7 +25,6 @@ body{
     height: 100vh;
     display: flex;
     justify-content: center;
-    margin-top: 5vh;
 }
 
 
@@ -36,12 +35,14 @@ body{
     width: 30vw;
     height: 90vh;
     border: 1px solid green;
+    margin-top: 5vh;
 }
 
 .message{
     width: 55vw;
     height: 90vh;
     border: 1px solid red;
+    margin-top: 5vh;
 }
 
 /*******************
@@ -49,14 +50,46 @@ body{
 *******************/
 
 .cards{
-    width: 100%;
+    max-width: 100%;
     height: 10%;
-    border: 1px solid salmon;
     background-color: #eaeaea;
     
 }
 
-.cards img{
+.lightblue{
+    background-color: lightblue;
+}
+
+.half{
+    max-width: 50%;
+}
+
+img{
     max-height: 100%;
     border-radius: 50%;
+}
+
+i{
+    margin-right: 15px;
+}
+
+
+.fa-solid{
+    color: #b1b1b1;
+}
+
+.fa-bell{
+    color: lightblue;
+    border-radius: 50%;
+    background-color: white;
+    padding: 10px;
+}
+
+
+.text{
+    max-height: 100%;
+}
+
+.text p{
+    font-size: 10px;
 }

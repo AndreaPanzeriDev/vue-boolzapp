@@ -12,7 +12,9 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <!--font awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--my css-->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -24,19 +26,40 @@
     <div id="root">
         <!--contatti-->
         <div class="contacts">
+            <!--User profile-->
             <div class="cards d-flex justify-content-between">
-                <div class="d-flex align-items-center">
-                    <img src="assets/img/avatar_io.jpg" alt="immagine_profilo">
+                <div class="d-flex align-items-center half">
+                    <img src="assets/img/avatar_io.jpg" alt="profile">
                     <span>Sofia</span>
                 </div>
-                <!--icons-->
-                <div class="d-flex align-items-center mx-1">
-                    <i class="fa-solid fa-rotate-right"></i>
+
+                <div class="d-flex align-items-center half">
+                    <i class="fa-solid fa-circle-notch"></i>
                     <i class="fa-solid fa-message"></i>
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
             </div>
+
+            <!--popUp-->
+            <div class="cards d-flex align-items-center lightblue">
+                <i class="fs-3 fa-solid fa-bell ms-4"></i>
+                <div class="text">
+                    <p>Ricevi notifiche di nuovi messaggi</p>
+                    <p class="text-decoration-underline">attiva notifiche desktop</p>
+                </div>
+            </div>
+
+            <!--Searchbar-->
+            <input type="text" placeholder="Inserisci il nome da cercare" class="w-100">
+
+            <!--Last chat-->
+            <div class="w-100">
+                <div class="cards d-flex" v-for="(description, index) in contacts">
+                    
+                </div>
+            </div>
         </div>
+        
         <!--mesage-->
         <div class="message">
 
