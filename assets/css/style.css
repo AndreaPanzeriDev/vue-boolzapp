@@ -34,14 +34,13 @@ body{
 .contacts{
     width: 30vw;
     height: 90vh;
-    border: 1px solid green;
     margin-top: 5vh;
+    border: 1px solid red;
 }
 
 .message{
     width: 55vw;
     height: 90vh;
-    border: 1px solid red;
     margin-top: 5vh;
 }
 
@@ -103,3 +102,17 @@ i{
 .fontSize{
     font-size: 10px;
 }
+
+.messageZone{
+    height: 80%;
+    background-image: url(../img/mine.jpg);
+}
+
+.typeNav{
+    height: 10%;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+

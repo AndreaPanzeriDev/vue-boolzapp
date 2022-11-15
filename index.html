@@ -71,7 +71,29 @@
 
         <!--mesage-->
         <div class="message">
+            <!--User profile-->
+            <div class="cards d-flex justify-content-between">
+                <div class="d-flex align-items-center half">
+                    <img src="assets/img/avatar_io.jpg" alt="profile">
+                    <span>Sofia</span>
+                </div>
 
+                <div class="d-flex align-items-center half">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+
+            <div class="messageZone">
+
+            </div>
+            <!--message bar-->
+            <div class="typeNav">
+                <i class="fa-solid fa-face-smile fs-3"></i>
+                <input type="text" placeholder="scrivi il messaggio" v-model="inputText" class="w-75">
+                <i class="fa-solid fa-microphone fs-3"></i>
+            </div>
         </div>
     </div>
 
