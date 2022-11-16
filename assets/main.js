@@ -105,7 +105,7 @@ var app = new Vue({
             {
                 name: 'Claudia',
                 avatar: './assets/img/avatar_6.jpg',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -201,7 +201,18 @@ var app = new Vue({
                 status: 'received'
             }
             this.contacts[this.dinamic].messages.push(answer);
-
+        },
+        searchContact(){
+            for(let i=0; i< this.contacts.length -1; i++){
+                if(this.contacts[i].name.includes(this.inputContact)){
+                    console.log('gg')
+                }if(this.inputContact == ''){
+                    this.contacts[i].visible = true;
+                }
+                else{
+                    this.contacts[i].visible = false;
+                }
+            }
         }
     }
 })
