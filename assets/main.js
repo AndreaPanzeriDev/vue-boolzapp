@@ -166,7 +166,16 @@ var app = new Vue({
             
         ]
     },
+    inputText: "",
     methods: {
-        
+        getLastMessage(index){
+            let lastText = this.contacts[index].messages.length -1;
+            console.log(lastText)
+            return this.contacts[index].messages[lastText].message
+        },
+        getLastHours(index){
+            let lastText = this.contacts[index].messages.length -1;
+            return this.contacts[index].messages[lastText].date.slice(10,16) 
+        }
     }
 })

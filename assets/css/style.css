@@ -12,8 +12,9 @@
 *******************/
 
 body{
-    background-color: #a7aca6;
+    background-image: linear-gradient(to bottom, #009688 0px, #009688 15vh, #dddbd1 15vh, #dddbd1 100%);
     overflow: hidden;
+
 }
 
 /*******************
@@ -35,7 +36,6 @@ body{
     width: 30vw;
     height: 90vh;
     margin-top: 5vh;
-    border: 1px solid red;
 }
 
 .message{
@@ -97,6 +97,7 @@ i{
 .hours{
     color: rgb(123, 123, 123);
     font-size: 12px;
+    flex: auto;
 }
 
 .fontSize{
@@ -116,3 +117,6 @@ i{
     align-items: center;
 }
 
+.tablecontact{
+    height: 95%;
+}
