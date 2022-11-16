@@ -146,3 +146,12 @@ i{
 .left{
     justify-content: start;
 }
+
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: flex;
+}

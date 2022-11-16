@@ -105,7 +105,7 @@ var app = new Vue({
             {
                 name: 'Claudia',
                 avatar: './assets/img/avatar_6.jpg',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -167,6 +167,7 @@ var app = new Vue({
         ],
         dinamic: 0,
         inputText: "",
+        inputContact: "",
     },
     methods: {
         getLastMessage(index) {

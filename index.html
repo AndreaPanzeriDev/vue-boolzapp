@@ -50,11 +50,11 @@
             </div>
 
             <!--Searchbar-->
-            <input type="text" placeholder="Inserisci il nome da cercare" class="w-100">
+            <input type="text" placeholder="Inserisci il nome da cercare" class="w-100" v-model="inputContact">
             <!--last message-->
             <div class="tablecontact">
-                <div class="cards d-flex justify-content-between" v-for="(name, index) in contacts" @click="selectionUser(index)">
-                    <div class="d-flex align-items-center w-75">
+                <div class="cards d-flex justify-content-between" v-for="(name, index) in contacts" @click="selectionUser(index)" :class="(contacts[index].visible == true) ? 'show' : 'hide'">
+                    <div class="d-flex align-items-center w-75" >
                         <img :src="contacts[index].avatar" alt="profile">
                         <div>
                             <div>{{contacts[index].name}}</div>
