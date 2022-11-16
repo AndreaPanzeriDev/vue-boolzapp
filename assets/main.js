@@ -167,6 +167,7 @@ var app = new Vue({
         ]
     },
     inputText: "",
+    outputMessage: "",
     methods: {
         getLastMessage(index){
             let lastText = this.contacts[index].messages.length -1;
@@ -176,6 +177,10 @@ var app = new Vue({
         getLastHours(index){
             let lastText = this.contacts[index].messages.length -1;
             return this.contacts[index].messages[lastText].date.slice(10,16) 
+        },
+        selectionUser(index){
+            
+            return this.contacts[index].messages;
         }
     }
 })
