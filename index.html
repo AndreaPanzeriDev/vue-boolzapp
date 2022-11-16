@@ -96,7 +96,7 @@
             <!--message bar-->
             <div class="typeNav">
                 <i class="fa-solid fa-face-smile fs-3"></i>
-                <input type="text" placeholder="scrivi il messaggio" v-model="xx" class="w-75">
+                <input type="text" placeholder="scrivi il messaggio" v-model="inputText" @keyup.enter="sendMessage()" class="w-75">
                 <i class="fa-solid fa-microphone fs-3"></i>
             </div>
         </div>

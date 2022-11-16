@@ -163,23 +163,46 @@ var app = new Vue({
                     }
                 ],
             },
-            
+
         ],
         dinamic: 0,
+        inputText: "",
     },
     methods: {
-        getLastMessage(index){
-            let lastText = this.contacts[index].messages.length -1;
+        getLastMessage(index) {
+            let lastText = this.contacts[index].messages.length - 1;
             console.log(lastText)
             return this.contacts[index].messages[lastText].message
         },
-        getLastHours(index){
-            let lastText = this.contacts[index].messages.length -1;
-            return this.contacts[index].messages[lastText].date.slice(10,16) 
+        getLastHours(index) {
+            let lastText = this.contacts[index].messages.length - 1;
+            return this.contacts[index].messages[lastText].date.slice(10, 16)
         },
-        selectionUser(index){
+        selectionUser(index) {
             console.log(index);
             return this.dinamic = index
+        },
+        sendMessage() {
+            let obj = {
+                date: '10/01/2020 15:51:00',
+                message: this.inputText,
+                status: 'sent'
+            }
+            this.contacts[this.dinamic].messages.push(obj);
+            this.inputText = ' '
+            setTimeout(this.Answer, 1000)
+
+        },
+        Answer(){
+            let answer ={
+                date: '10/01/2020 15:51:00',
+                message: 'ok',
+                status: 'received'
+            }
+            this.contacts[this.dinamic].messages.push(answer);
+
         }
     }
 })
+
+
