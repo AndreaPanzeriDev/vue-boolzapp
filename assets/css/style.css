@@ -120,3 +120,29 @@ i{
 .tablecontact{
     height: 95%;
 }
+
+
+.receivedMessage,
+.sentMessage{
+    padding: 10px;
+    max-width: 80%;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.sentMessage{
+    background-color: rgb(71, 218, 71);
+}
+
+.right{
+    justify-content: end;
+}
+
+.receivedMessage{
+    background-color: white;
+    
+}
+
+.left{
+    justify-content: start;
+}

@@ -164,10 +164,9 @@ var app = new Vue({
                 ],
             },
             
-        ]
+        ],
+        dinamic: 0,
     },
-    inputText: "",
-    outputMessage: "",
     methods: {
         getLastMessage(index){
             let lastText = this.contacts[index].messages.length -1;
@@ -179,8 +178,8 @@ var app = new Vue({
             return this.contacts[index].messages[lastText].date.slice(10,16) 
         },
         selectionUser(index){
-            
-            return this.contacts[index].messages;
+            console.log(index);
+            return this.dinamic = index
         }
     }
 })

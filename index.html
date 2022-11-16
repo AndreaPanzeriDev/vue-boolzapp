@@ -71,13 +71,13 @@
 
         </div>
 
-        <!--mesage-->
+        <!--MESSAGE-->
         <div class="message">
             <!--User profile-->
             <div class="cards d-flex justify-content-between">
                 <div class="d-flex align-items-center half">
-                    <img src="assets/img/avatar_io.jpg" alt="profile">
-                    <span>Sofia</span>
+                    <img :src="contacts[dinamic].avatar" alt="profile">
+                    <span>{{contacts[dinamic].name}}</span>
                 </div>
 
                 <div class="d-flex align-items-center half">
@@ -88,15 +88,15 @@
             </div>
 
             <div class="messageZone">
-                <div v-for="(descriptio, index) in messages">
-                    <div>{{}}</div>
+                <div v-for="(descriptio, index) in contacts[dinamic].messages" class="d-flex" :class="(contacts[dinamic].messages[index].status == 'received') ? 'left' : 'right'">
+                    <div :class="(contacts[dinamic].messages[index].status == 'received') ? 'receivedMessage' : 'sentMessage'">{{contacts[dinamic].messages[index].message}}</div>
                 </div>
             </div>
 
             <!--message bar-->
             <div class="typeNav">
                 <i class="fa-solid fa-face-smile fs-3"></i>
-                <input type="text" placeholder="scrivi il messaggio" v-model="inputText" class="w-75">
+                <input type="text" placeholder="scrivi il messaggio" v-model="xx" class="w-75">
                 <i class="fa-solid fa-microphone fs-3"></i>
             </div>
         </div>
