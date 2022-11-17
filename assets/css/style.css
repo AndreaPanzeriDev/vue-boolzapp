@@ -151,9 +151,13 @@ i{
 }
 
 
+
 .hours{
     font-size: 10px;
-    margin-left: 15px;
     color: gray;
-  
+    margin-left: -10px; 
+}
+
+.dropdown{
+    color: lightgray;
 }

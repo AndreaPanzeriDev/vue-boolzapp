@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    
+
 
     <div id="root">
         <!--contatti-->
@@ -51,11 +51,13 @@
             </div>
 
             <!--Searchbar-->
-            <input type="text" placeholder="Inserisci il nome da cercare" class="w-100" v-model="inputContact" :keyup="searchContact()">
+            <input type="text" placeholder="Inserisci il nome da cercare" class="w-100" v-model="inputContact"
+                :keyup="searchContact()">
             <!--last message-->
             <div class="tablecontact">
-                <div class="cards d-flex justify-content-between" v-for="(name, index) in contacts" @click="selectionUser(index)" v-if="contacts[index].visible == true">
-                    <div class="d-flex align-items-center w-75" >
+                <div class="cards d-flex justify-content-between" v-for="(name, index) in contacts"
+                    @click="selectionUser(index)" v-if="contacts[index].visible == true">
+                    <div class="d-flex align-items-center w-75">
                         <img :src="contacts[index].avatar" alt="profile">
                         <div>
                             <div>{{contacts[index].name}}</div>
@@ -68,7 +70,7 @@
                     </div>
                 </div>
             </div>
-            
+
 
         </div>
 
@@ -89,15 +91,29 @@
             </div>
 
             <div class="messageZone">
-                <div v-for="(descriptio, index) in contacts[dinamic].messages" class="d-flex" :class="(contacts[dinamic].messages[index].status == 'received') ? 'left' : 'right'">
-                    <div :class="(contacts[dinamic].messages[index].status == 'received') ? 'receivedMessage' : 'sentMessage'">{{contacts[dinamic].messages[index].message}} <span class="hours">{{contacts[dinamic].messages[index].date.slice(10, 16)}}</span></div>
+                <div v-for="(descriptio, index) in contacts[dinamic].messages" class="d-flex"
+                    :class="(contacts[dinamic].messages[index].status == 'received') ? 'left' : 'right'">
+                    <div
+                        :class="(contacts[dinamic].messages[index].status == 'received') ? 'receivedMessage' : 'sentMessage'">
+                        {{contacts[dinamic].messages[index].message}}
+                        <span class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Message info</a></li>
+                                <li><a class="dropdown-item" @click="deleteMessage(index)" href="#">Delete Message</a></li>
+                            </ul>
+                        </span> <span class="hours">{{contacts[dinamic].messages[index].date.slice(10, 16)}}</span>
+                    </div>
                 </div>
             </div>
 
             <!--message bar-->
             <div class="typeNav">
                 <i class="fa-solid fa-face-smile fs-3"></i>
-                <input type="text" placeholder="scrivi il messaggio" v-model="inputText" @keyup.enter="sendMessage()" class="w-75">
+                <input type="text" placeholder="scrivi il messaggio" v-model="inputText" @keyup.enter="sendMessage()"
+                    class="w-75">
                 <i class="fa-solid fa-microphone fs-3"></i>
             </div>
         </div>

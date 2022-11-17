@@ -197,7 +197,7 @@ var app = new Vue({
         },
         Answer(){
             let answer ={
-                date: '10/01/2020 15:51:00',
+                date: this.WhatTimeIsIt(),
                 message: 'ok',
                 status: 'received'
             }
@@ -242,7 +242,10 @@ var app = new Vue({
                 const today = day +'/' + month + '/' + year + ' ' +hourMinutes
                 console.log(today);
                 return today
-    
+        },
+        deleteMessage(index){
+           console.log(this.contacts[this.dinamic].messages[index])
+           this.contacts[this.dinamic].messages[index].slice
         }
     }
 })
