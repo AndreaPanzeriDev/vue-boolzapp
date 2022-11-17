@@ -185,13 +185,14 @@ var app = new Vue({
         },
         sendMessage() {
             let obj = {
-                date: '10/01/2020 15:51:00',
+                date: this.WhatTimeIsIt(),
                 message: this.inputText,
                 status: 'sent'
             }
             this.contacts[this.dinamic].messages.push(obj);
             this.inputText = ' '
             setTimeout(this.Answer, 1000)
+
 
         },
         Answer(){
@@ -211,6 +212,37 @@ var app = new Vue({
                     return element.visible = false;
                 }
             })
+        },
+        WhatTimeIsIt(){
+            let date = new Date();
+                let hour = date.getHours();
+                let minutes = date.getMinutes();
+                let seconds = date.getSeconds();
+                let hourMinutes = '';
+                let day = date.getDate();
+                let month = date.getMonth() + 1
+                let year = date.getFullYear()
+
+                if(minutes < 10){
+                    if(seconds<10){
+                        hourMinutes = hour + ':' + 0 + minutes + ':' + 0 + seconds;
+                    }else{
+                        hourMinutes = hour + ':' + 0 + minutes + ':' + seconds;
+                    }
+
+                } else{
+                    if(seconds<10){
+                        hourMinutes = hour + ':' + minutes + ':' + 0 + seconds;
+                    }else{
+                        hourMinutes = hour + ':' + minutes + ':' + seconds;
+                    }
+                    
+
+                }
+                const today = day +'/' + month + '/' + year + ' ' +hourMinutes
+                console.log(today);
+                return today
+    
         }
     }
 })

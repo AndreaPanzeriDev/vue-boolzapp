@@ -22,6 +22,7 @@
 </head>
 
 <body>
+    
 
     <div id="root">
         <!--contatti-->
@@ -89,7 +90,7 @@
 
             <div class="messageZone">
                 <div v-for="(descriptio, index) in contacts[dinamic].messages" class="d-flex" :class="(contacts[dinamic].messages[index].status == 'received') ? 'left' : 'right'">
-                    <div :class="(contacts[dinamic].messages[index].status == 'received') ? 'receivedMessage' : 'sentMessage'">{{contacts[dinamic].messages[index].message}}</div>
+                    <div :class="(contacts[dinamic].messages[index].status == 'received') ? 'receivedMessage' : 'sentMessage'">{{contacts[dinamic].messages[index].message}} <span class="hours">{{contacts[dinamic].messages[index].date.slice(10, 16)}}</span></div>
                 </div>
             </div>
 
@@ -113,6 +114,9 @@
 
     <!--Vue 2-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <!--API time-->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
 
     <!--my javascript-->
     <script src="assets/main.js"></script>

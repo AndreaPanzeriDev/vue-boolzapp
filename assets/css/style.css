@@ -107,6 +107,7 @@ i{
 .messageZone{
     height: 80%;
     background-image: url(../img/mine.jpg);
+    overflow-y: scroll;
 }
 
 .typeNav{
@@ -119,7 +120,7 @@ i{
 
 .tablecontact{
     height: 75%;
-    overflow: scroll;
+    overflow-y: scroll;
     background-color: white;
 }
 
@@ -133,7 +134,7 @@ i{
 }
 
 .sentMessage{
-    background-color: rgb(71, 218, 71);
+    background-color: #d5f9ba;
 }
 
 .right{
@@ -150,3 +151,9 @@ i{
 }
 
 
+.hours{
+    font-size: 10px;
+    margin-left: 15px;
+    color: gray;
+  
+}
