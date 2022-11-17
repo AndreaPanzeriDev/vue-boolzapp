@@ -203,16 +203,14 @@ var app = new Vue({
             this.contacts[this.dinamic].messages.push(answer);
         },
         searchContact(){
-            for(let i=0; i< this.contacts.length -1; i++){
-                if(this.contacts[i].name.includes(this.inputContact)){
-                    console.log('gg')
-                }if(this.inputContact == ''){
-                    this.contacts[i].visible = true;
+            this.contacts.forEach((element, index) => {
+                let x = element.name.toLowerCase();
+                if(x.includes(this.inputContact.toLowerCase())){
+                    return element.visible = true;
+                }else{
+                    return element.visible = false;
                 }
-                else{
-                    this.contacts[i].visible = false;
-                }
-            }
+            })
         }
     }
 })

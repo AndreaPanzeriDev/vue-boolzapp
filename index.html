@@ -50,7 +50,7 @@
             </div>
 
             <!--Searchbar-->
-            <input type="text" placeholder="Inserisci il nome da cercare" class="w-100" v-model="inputContact" @keyup.enter="searchContact()">
+            <input type="text" placeholder="Inserisci il nome da cercare" class="w-100" v-model="inputContact" :keyup="searchContact()">
             <!--last message-->
             <div class="tablecontact">
                 <div class="cards d-flex justify-content-between" v-for="(name, index) in contacts" @click="selectionUser(index)" v-if="contacts[index].visible == true">
