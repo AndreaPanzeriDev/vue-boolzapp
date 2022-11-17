@@ -243,9 +243,8 @@ var app = new Vue({
                 console.log(today);
                 return today
         },
-        deleteMessage(index){
-           console.log(this.contacts[this.dinamic].messages[index])
-           this.contacts[this.dinamic].messages[index].slice
+        deleteMessage(descriptio, index){
+            this.contacts[this.dinamic].messages.splice(index, 1)
         }
     }
 })

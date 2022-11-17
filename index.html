@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Boolzap</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -97,12 +97,12 @@
                         :class="(contacts[dinamic].messages[index].status == 'received') ? 'receivedMessage' : 'sentMessage'">
                         {{contacts[dinamic].messages[index].message}}
                         <span class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            <button class="btn dropdown-toggle border-0" type="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Message info</a></li>
-                                <li><a class="dropdown-item" @click="deleteMessage(index)" href="#">Delete Message</a></li>
+                                <li><a class="dropdown-item" @click="deleteMessage(descriptio, index)" href="#">Delete Message</a></li>
                             </ul>
                         </span> <span class="hours">{{contacts[dinamic].messages[index].date.slice(10, 16)}}</span>
                     </div>
